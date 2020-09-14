@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+
+            font-family: 'Roboto', sans-serif;
+        }
+
+        section {
+            position: relative;
+        }
+
+        main {
+            background-color: black;
+            padding-bottom: 30rem;
+            padding-top: 20rem;
+        }
+
+        article {
+           position: relative;
+           padding: 0 1rem;
+           margin: 0 auto;
+           width: 33%;
+        }
+
+        figure {
+            position: -webkit-sticky;
+            position: sticky;
+            width: 90%;
+            margin: 0 auto;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            z-index: 0;
+        }
+
+        .step {
+            background-color: white;
+            margin: 2rem auto 4rem auto;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step p {
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        #question {
+            max-width: 38rem;
+           margin-left: auto;
+           margin-right: auto;
+           margin-bottom: 0;
+           margin-top: 50%;
+            
+        }
+        #questionText {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 50px;
+            line-height: 1.5;
+            text-align: center;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="scrolly1">
+            <figure id="firstIMG">
+                <img src="Lead-in 1.svg">
+            </figure>
+
+            <article>
+                <div class="step" data-step="1">
+                    <p> In the last 10 years, over 470,000 Manhattan-based complaints with definitive suspect race
+                        descriptions were filed to the NYPD.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly2">
+            <figure>
+                <img src="Lead in 3.svg">
+            </figure>
+
+            <article>
+                <div class="step" data-step="1">
+                    <p>As of July 15, 2020, 233,445—nearly half—of these complaints are directed towards Black suspects.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>In Precincts 26 and 30, which services Morningside Heights and West Harlem, the percentage
+                        increases to 55.62%. </p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly3">
+            <figure>
+                <img src="Landing Page_Lead-in 4.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p>On May 25, 2020, George Floyd, a Black man, met an untimely death at the hands of four non-Black
+                        Minneapolis policemen.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly4">
+            <figure>
+                <img src="Landing Pages_Lead-in 5.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p>In the following weeks, civil rights activists organized a series of protests that marked the
+                        resurgence of the Black Lives Matter movement. Thousands of protestors across the
+                        world marched in solidarity against centuries-long racism and
+                        state-sanctioned violence toward Black communities.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly5">
+            <figure>
+                <img src="Landing Pages_Lead-in 6.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p> <b>These are not new issues</b> — they have been rampant in the Columbia and West Harlem
+                        communities, since the 1968 protests.
+                        The NYPD is not foreign to being criticized for their supposed racial biases, but the question
+                        stands: </p>
+                </div>
+            </article>
+        </section>
+        <div id="question">
+            <p id="questionText"> Have city-wide protests successfully shifted systemic racism in the NYPD by reducing
+                racially-charged police brutality? </p>
+        </div>
+    </main>
+    
+    <script id="1">
+        var scrolly1 = document.querySelector("#scrolly1");
+        var figure1 = scrolly1.querySelector("figure");
+        var article1 = scrolly1.querySelector("article");
+        var step1 = article1.querySelectorAll(".step");
+
+        var scroller = scrollama();
+
+        function handleStepEnter(response) {
+            // add color to current step only
+            console.log(response);
+            
+            response.element.classList.add("is-active");
+        }
+
+        function handleStepExit(response) {
+            console.log(response);
+            response.element.classList.remove("is-active");
+        }
+
+        function setupStickyfill() {
+            d3.selectAll(".sticky").each(function () {
+                Stickyfill.add(this);
+            });
+        }
+
+        function init() {
+           step1.forEach(function(step) {
+               var v = 100 + Math.floor((Math.random() * window.innerHeight) / 4);
+               step.style.padding = v + "px 0px";
+           });
+
+           var midpoint = Math.floor(window.innerHeight * 0.5) + "px";
+
+           scroller
+            .setup({
+                step: "#scrolly article .step",
+                debug: true,
+                offset: midpoint
+            })
+            .onStepEnter(handleStepEnter)
+            .onStepExit(handleStepExit);
+
+            window.addEventListener("resize", scroller.resize);
+        }
+        init();
+    </script>
+    
+</body>

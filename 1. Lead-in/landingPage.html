@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+
+            font-family: 'Roboto', sans-serif;
+        }
+
+        section {
+            position: relative;
+            padding: 1rem;
+            margin-bottom: 300px;
+        }
+
+        main {
+            background-color: black;
+            padding-bottom: 30rem;
+            padding-top: 20rem;
+        }
+
+        article {
+            position: relative;
+            max-width: 38rem;
+            margin: 0 auto;
+            padding-top: 50%;
+        }
+
+        figure {
+            position: -webkit-sticky;
+            position: sticky;
+            width: 90%;
+            margin: 0 auto;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            z-index: 0;
+        }
+
+        .step {
+            background-color: white;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 21rem;
+
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step p {
+            text-align: center;
+            padding: 1rem;
+            font-size: 21px;
+            line-height: 1.6;
+        }
+
+        #question {
+            max-width: 38rem;
+           margin-left: auto;
+           margin-right: auto;
+           margin-bottom: 0;
+           margin-top: 50%;
+            
+        }
+        #questionText {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 50px;
+            line-height: 1.5;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="scrolly1">
+            <figure id="firstIMG">
+                <img src="Lead-in 1.svg">
+            </figure>
+
+            <article>
+                <div class="step" data-step="1">
+                    <p> In the last 10 years, over 470,000 Manhattan-based complaints with definitive suspect race
+                        descriptions were filed to the NYPD.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly2">
+            <figure>
+                <img src="Lead in 3.svg">
+            </figure>
+
+            <article>
+                <div class="step" data-step="1">
+                    <p>As of July 15, 2020, 233,445—nearly half—of these complaints are directed towards Black suspects.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>In Precincts 26 and 30, which services Morningside Heights and West Harlem, the percentage
+                        increases to 55.62%. </p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly3">
+            <figure>
+                <img src="Landing Page_Lead-in 4.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p>On May 25, 2020, George Floyd, a Black man, met an untimely death at the hands of four non-Black
+                        Minneapolis policemen.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly4">
+            <figure>
+                <img src="Landing Pages_Lead-in 5.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p>In the following weeks, civil rights activists organized a series of protests that marked the
+                        resurgence of the Black Lives Matter movement. Thousands of protestors across the
+                        world marched in solidarity against centuries-long racism and
+                        state-sanctioned violence toward Black communities.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly5">
+            <figure>
+                <img src="Landing Pages_Lead-in 6.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p> <b>These are not new issues</b> — they have been rampant in the Columbia and West Harlem
+                        communities, since the 1968 protests.
+                        The NYPD is not foreign to being criticized for their supposed racial biases, but the question
+                        stands: </p>
+                </div>
+            </article>
+        </section>
+        <div id="question">
+            <p id="questionText"> Have city-wide protests successfully shifted systemic racism in the NYPD by reducing
+                racially-charged police brutality? </p>
+        </div>
+    </main>
+    
+    <script id="1">
+        var main = d3.select("main");
+        var scrolly1 = main.select("#scrolly1");
+        var figure1 = scrolly1.select("figure");
+        var article1 = scrolly1.select("article");
+        var step1 = article1.selectAll(".step");
+
+        var scroller = scrollama();
+
+        function handleResize() {
+            // 1. update height of step elements
+            var stepH = Math.floor(window.innerHeight * 0.75);
+            step1.style("height", stepH + "px");
+
+            var figureHeight = window.innerHeight / 2;
+            var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+            figure1
+                .style("height", figureHeight + "px")
+                .style("top", figureMarginTop + "px");
+
+            // 3. tell scrollama to update new element dimensions
+            scroller.resize();
+        }
+
+        function handleStepEnter(response) {
+            // add color to current step only
+            console.log(response.index)
+            step1.classed("is-active", function (d, i) {
+                return i === response.index;
+            });
+        }
+
+        function setupStickyfill() {
+            d3.selectAll(".sticky").each(function () {
+                Stickyfill.add(this);
+            });
+        }
+
+        function init() {
+            setupStickyfill();
+            handleResize();
+
+            scroller
+                .setup({
+                    step: "#scrolly1 article .step",
+                    offset: 0.3,
+                    debug: false
+                })
+                .onStepEnter(handleStepEnter);
+
+            window.addEventListener("resize", handleResize);
+        }
+        init();
+    </script>
+    <script id="2">
+        var main = d3.select("main");
+        var scrolly2 = main.select("#scrolly2");
+        var figure2 = scrolly2.select("figure");
+        var article2 = scrolly2.select("article");
+        var step2 = article2.selectAll(".step");
+
+        var scroller = scrollama();
+
+        function handleResize() {
+            // 1. update height of step elements
+            var stepH = Math.floor(window.innerHeight * 0.75);
+            step2.style("height", stepH + "px");
+
+            var figureHeight = window.innerHeight / 2;
+            var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+            figure2
+                .style("height", figureHeight + "px")
+                .style("top", figureMarginTop + "px");
+
+            // 3. tell scrollama to update new element dimensions
+            scroller.resize();
+        }
+
+        function handleStepEnter(response) {
+            // add color to current step only
+            console.log(response.index)
+            step2.classed("is-active", function (d, i) {
+                return i === response.index;
+            });
+        }
+
+        function setupStickyfill() {
+            d3.selectAll(".sticky").each(function () {
+                Stickyfill.add(this);
+            });
+        }
+
+        function init() {
+            setupStickyfill();
+            handleResize();
+
+            scroller
+                .setup({
+                    step: "#scrolly1 article .step",
+                    offset: 0.3,
+                    debug: false
+                })
+                .onStepEnter(handleStepEnter);
+
+            window.addEventListener("resize", handleResize);
+
+        }
+        init();
+    </script>
+    <script id="3">
+        var main = d3.select("main");
+        var scrolly3 = main.select("#scrolly3");
+        var figure3 = scrolly3.select("figure");
+        var article3 = scrolly3.select("article");
+        var step3 = article3.selectAll(".step");
+
+        var scroller = scrollama();
+
+        function handleResize() {
+            // 1. update height of step elements
+            var stepH = Math.floor(window.innerHeight * 0.75);
+            step3.style("height", stepH + "px");
+
+            var figureHeight = window.innerHeight / 2;
+            var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+            figure3
+                .style("height", figureHeight + "px")
+                .style("top", figureMarginTop + "px");
+
+            // 3. tell scrollama to update new element dimensions
+            scroller.resize();
+        }
+
+        function handleStepEnter(response) {
+            // add color to current step only
+            console.log(response.index)
+            step3.classed("is-active", function (d, i) {
+                return i === response.index;
+            });
+        }
+
+        function setupStickyfill() {
+            d3.selectAll(".sticky").each(function () {
+                Stickyfill.add(this);
+            });
+        }
+
+        function init() {
+            setupStickyfill();
+            handleResize();
+
+            scroller
+                .setup({
+                    step: "#scrolly1 article .step",
+                    offset: 0.5,
+                    debug: false
+                })
+                .onStepEnter(handleStepEnter);
+
+            window.addEventListener("resize", handleResize);
+
+        }
+        init();
+    </script>
+    <script id="4">
+        var main = d3.select("main");
+        var scrolly4 = main.select("#scrolly4");
+        var figure4 = scrolly4.select("figure");
+        var article4 = scrolly4.select("article");
+        var step4 = article4.selectAll(".step");
+
+        var scroller = scrollama();
+
+        function handleResize() {
+            // 1. update height of step elements
+            var stepH = Math.floor(window.innerHeight * 0.75);
+            step4.style("height", stepH + "px");
+
+            var figureHeight = window.innerHeight / 2;
+            var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+            figure4
+                .style("height", figureHeight + "px")
+                .style("top", figureMarginTop + "px");
+
+            // 3. tell scrollama to update new element dimensions
+            scroller.resize();
+        }
+
+        function handleStepEnter(response) {
+            // add color to current step only
+            console.log(response.index)
+            step4.classed("is-active", function (d, i) {
+                return i === response.index;
+            });
+        }
+
+        function setupStickyfill() {
+            d3.selectAll(".sticky").each(function () {
+                Stickyfill.add(this);
+            });
+        }
+
+        function init() {
+            setupStickyfill();
+            handleResize();
+
+            scroller
+                .setup({
+                    step: "#scrolly1 article .step",
+                    offset: 0.5,
+                    debug: false
+                })
+                .onStepEnter(handleStepEnter);
+
+            window.addEventListener("resize", handleResize);
+
+        }
+        init();
+    </script>
+    <script id="5">
+        var main = d3.select("main");
+        var scrolly5 = main.select("#scrolly5");
+        var figure5 = scrolly5.select("figure");
+        var article5 = scrolly5.select("article");
+        var step5 = article5.selectAll(".step");
+
+        var scroller = scrollama();
+
+        function handleResize() {
+            // 1. update height of step elements
+            var stepH = Math.floor(window.innerHeight * 0.75);
+            step5.style("height", stepH + "px");
+
+            var figureHeight = window.innerHeight / 2;
+            var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+            figure5
+                .style("height", figureHeight + "px")
+                .style("top", figureMarginTop + "px");
+
+            // 3. tell scrollama to update new element dimensions
+            scroller.resize();
+        }
+
+        function handleStepEnter(response) {
+            // add color to current step only
+            console.log(response.index)
+            step5.classed("is-active", function (d, i) {
+                return i === response.index;
+            });
+        }
+
+        function setupStickyfill() {
+            d3.selectAll(".sticky").each(function () {
+                Stickyfill.add(this);
+            });
+        }
+
+        function init() {
+            setupStickyfill();
+            handleResize();
+
+            scroller
+                .setup({
+                    step: "#scrolly1 article .step",
+                    offset: 0.5,
+                    debug: false
+                })
+                .onStepEnter(handleStepEnter);
+
+            window.addEventListener("resize", handleResize);
+
+        }
+        init();
+    </script>
+</body>
