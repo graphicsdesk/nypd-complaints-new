@@ -1,0 +1,205 @@
+{
+  "headline": "NYPD data reveals long-standing racial biases. Even with calls for racial equality, police arrest records show no change.",
+  "date": "September 9, 2020",
+  "byline": "By <a href=\"https://www.columbiaspectator.com/contributors/Andrew-Park/\">Andrew Park</a> and <a href=\"https://www.columbiaspectator.com/contributors/Melissa-Wang/\">Melissa Wang</a>\nEdited by <a href=\"https://www.columbiaspectator.com/contributors/Raeedah-Wahid/\">Raeedah Wahid</a>",
+  "top": [
+    {
+      "type": "graphic",
+      "value": {
+        "asset": "landingPage.html",
+        "steps": []
+      }
+    }
+  ],
+  "body": [
+    {
+      "type": "text",
+      "value": "The New York Police Department is no stranger to claims of racial discrimination between its officers and the people they are meant to protect."
+    },
+    {
+      "type": "text",
+      "value": "For West Harlem, Columbia stands at the heart of these racial tensions. In <a href=\"https://www.columbiaspectator.com/multimedia/visualizing-1968/\">1968</a>, protests over the University’s proposal to build a gym in Morningside Heights—which included what residents called a “Jim Crow” entrance for Harlem residents—led to arrests and violence enacted from NYPD. In 2019, tensions arose following the death of Tess Majors, a first-year Barnard student, who was fatally stabbed in Morningside Park. The incident brought forth discussions of these <a href=\"https://www.columbiaspectator.com/news/2020/01/22/morningside-park-is-essential-to-harlems-identity-how-has-the-university-misunderstood-resident-challenges-in-the-public-space/\">racial tensions</a> to the forefront of the community’s consciousness. In each conversation, a common thread was revealed: NYPD did not understand how to navigate its position with the community."
+    },
+    {
+      "type": "text",
+      "value": "Conversations of over policing have long existed in the community. The 1989 Central Park Five case where Black East Harlem teenagers were targeted and coerced to plead guilty to a crime they were later found falsely accused reaffirmed resident’s mistrust of the NYPD."
+    },
+    {
+      "type": "text",
+      "value": "[Related: <a href=\"https://www.columbiaspectator.com/news/2019/06/13/central-park-five-prosecutor-elizabeth-lederer-resigns-from-law-school-lecturer-position-citing-public-response/\">‘Central Park Five’ prosecutor Elizabeth Lederer resigns from Law School lecturer position, citing public response</a>]"
+    },
+    {
+      "type": "text",
+      "value": "And in recent memory, hundreds of police officers stormed <a href=\"https://www.columbiaspectator.com/news/2014/06/11/after-harlem-gang-raid-anti-violence-advocates-seek-defuse-tensions/\">Grant Housing</a> in 2014 for what became the city’s largest ever gang raid. Relatives and neighbors were arrested, leaving a feeling of distrust and fear."
+    },
+    {
+      "type": "text",
+      "value": "In order to assess the racial disrimination charges against the NYPD, Spectator analyzed public NYPD <a href=\"https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i\">complaint</a> and <a href=\"https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u\">arrest</a> records dating from 2006 to 2020."
+    },
+    {
+      "type": "text",
+      "value": "Both record pools revealed evidence of racial bias: in the Morningside Heights and West Harlem area alone, the percentage of Black suspects was 55.6%, where Black people only comprise 21.5% of the area’s total population. In contrast, white suspects only make up 6.1% of the suspect pool, even though white people make up 27.6% of the total population."
+    },
+    {
+      "type": "text",
+      "value": "Although the criminal and complaint data may suggest that Black individuals commit more crimes than their white counterparts, this trend is not necessarily an accurate one. Wright said that this inaccuracy stems from the under-reporting of crimes against Black people as well as the systemic racism present in the police force."
+    },
+    {
+      "type": "text",
+      "value": "“[Racial policing] has been meshed into our society to look normal,” said Robert Wright, a research assistant at Columbia University’s Social Relations Lab, who has written essays depicting his experiences with the justice system."
+    },
+    {
+      "type": "text",
+      "value": "“Anything you see now is not new…. Can you imagine the atrocities when no one is looking, when we didn’t know the economics of these systems? Police have been a tool of oppression since they let us out of jails.”"
+    },
+    {
+      "type": "text",
+      "value": "Based on the data, Spectator found a possible presence of systemic racism within the police force, an issue which has sparked numerous protests across the city. In light of the recent murder of George Floyd, protestors continue to take to the streets to call for racial equality, demanding an end to police brutality and misconduct."
+    },
+    {
+      "type": "text",
+      "value": "However, in looking at recent as well as previous periods of protests, Spectator has found that NYPD racially biased arrest behavior has not changed amid the protests."
+    },
+    {
+      "type": "text",
+      "value": "To better understand the racial disparity in policing, Spectator formed a Racial Disparity Index (RDI) metric. This metric divides the portion of Black arrests by complaints, specifically complaints filed against Black suspects concerning felony, misdemeanor and violation crimes. An RDI value of less than 1 indicates more complaints against Black people than arrests, whereas a value greater than 1 shows more arrests than complaints."
+    },
+    {
+      "type": "text",
+      "value": "Since the death of George Floyd in May this year, protests against police brutality and calls for racial equality have spread across the country. While the protests have resulted in government action, as the police who murdered Floyd have been <a href=\"https://www.nytimes.com/2020/05/29/us/minneapolis-police-george-floyd.html\">charged</a> and New York City mayor Bill de Blasio has <a href=\"https://twitter.com/NYCMayor/status/1269718728305934337?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1269718728305934337%7Ctwgr%5E&ref_url=https%3A%2F%2Fwww.businessinsider.com%2F13-concrete-changes-sparked-by-george-floyd-protests-so-far-2020-6\">pledged</a> to shift NYPD funds to youth and social programs, it is difficult to determine whether this trend of changes will last."
+    },
+    {
+      "type": "graphic",
+      "value": {
+        "asset": "newTime.html"
+      }
+    },
+    {
+      "type": "text",
+      "value": "Based on RDI trends from five distinct periods of protest in both CD 9 and overall Manhattan, it is strongly arguable that the BLM protests have yet to significantly minimize the arrests and complaint numbers against Black people."
+    },
+    {
+      "type": "text",
+      "value": "“I think this is where we [Black people] lose in this country,” Wright said. “We lose momentum because we think systemic racism [is going to] go overnight… we think, ‘just do this, and now you [can] deprogram centuries of superiority.’”"
+    },
+    {
+      "type": "text",
+      "value": "<b>  </b>"
+    },
+    {
+      "type": "subhed",
+      "value": "Racial Trends Continue to be Apparent in Neighbourhoods Besides West Harlem"
+    },
+    {
+      "type": "text",
+      "value": "Past tensions of over policing coincide with data showing that, in the last 10 years, the Black population makes up over half of both the suspect and criminal population in West Harlem,  suggesting that racial bias has an influence on policing behavior in West Harlem."
+    },
+    {
+      "type": "text",
+      "value": "However, it isn’t just West Harlem suffering from a possible racial bias in their policing system. In the Bronx, crime data suggests similar racial trends."
+    },
+    {
+      "type": "text",
+      "value": "In Bronx’s CD11, which has similar racial demographics, economic backgrounds, and education levels as West Harlem, black suspects again comprise approximately half of the suspect pool in both districts."
+    },
+    {
+      "type": "subhed",
+      "value": "Racial demographics"
+    },
+    {
+      "type": "graphic",
+      "value": {
+        "asset": "racialGraph.html"
+      }
+    },
+    {
+      "type": "subhed",
+      "value": "Proportion of Black Suspects"
+    },
+    {
+      "type": "graphic",
+      "value": {
+        "asset": "blackSuspectGraph.html"
+      }
+    },
+    {
+      "type": "subhed",
+      "value": "Proportion of White Suspects"
+    },
+    {
+      "type": "graphic",
+      "value": {
+        "asset": "whiteSuspectGraph.html"
+      }
+    },
+    {
+      "type": "text",
+      "value": "Racial bias among the police is not the only factor that can result in such trends, according to Wright."
+    },
+    {
+      "type": "text",
+      "value": "“There’s no particular crime in which a set of ethnicities chooses to commit - there are always a few ingredients to criminality, such as [lack of social services], poverty [and] drugs,” Wright said."
+    },
+    {
+      "type": "subhed",
+      "value": "Conclusion"
+    },
+    {
+      "type": "text",
+      "value": "Besides the influence of other factors, the incomplete nature of policing data makes it difficult to depict completely accurate trends."
+    },
+    {
+      "type": "text",
+      "value": "For example, the  significant number of “unknowns” listed under suspect’s race overpopulates the data."
+    },
+    {
+      "type": "text",
+      "value": "“[When] a person reports a crime but doesn’t know who committed the crime, they cannot report to the police what race that [criminal] is,” explained Daniel Bodah, a research fellow at the Vera Institute of Justice and former investigator for the Civilian Complaint Review Board. “A lot of records come from police who encounter a situation while they’re driving around, or from a 911 call. The police fill out  a complaint report [...] and then those are given to detectives to investigate [...] but in many cases, they may never know information about who the suspect is.”"
+    },
+    {
+      "type": "text",
+      "value": "Furthermore, mistrust of police systems and fear of retaliation may result in reluctance to report complaints among Black residents, Wright added."
+    },
+    {
+      "type": "text",
+      "value": "<b>Even with what is made available or public, data suggests little change in arrest or complaint demographics even after calls for police accountability. </b>"
+    },
+    {
+      "type": "text",
+      "value": "While protests haven’t shown conclusive changes in NYPD arrest and conduct behavior, community members say changes are underway to eradicate systemic racism, albeit slow-going."
+    },
+    {
+      "type": "text",
+      "value": "“The disconnect is being revisited,” stated Bodah. “For instance, at the peak of stop-and-frisks, they [the police] did that more than 600,000 times in a single year. [But] the statistics looked very skewed, and so there was a lawsuit brought against the NYPD saying these stops were based on race and that was constitutional[...] and when the judge issued her ruling, she pointed out that the defense actually admitted that that they were making stops based on race [...] so stop-and-frisk in New York City is used much less frequently now.”"
+    },
+    {
+      "type": "text",
+      "value": "“Now when you have a situation like George Floyd, everyone’s on high alert,” said Derrick Haynes, a vocal anti-violence activist, on the subject of change in the police force. “There’s a different awareness and feeling now among police. I’m watching and they’re communicating with the community now. They’re holding conversations with people in the community, I see there’s a better line of communication. I’ve never seen this line of communication before.”"
+    },
+    {
+      "type": "text",
+      "value": "In terms of whether or not the BLM protests can create real change, Wright said that this year’s protests may be different."
+    },
+    {
+      "type": "text",
+      "value": "“It seems like this generation is more morally obligated - when you decide that something is wrong, [you] do something about it. That’s the difference.”"
+    },
+    {
+      "type": "text",
+      "value": "“It’s your duty to research [the truth],” continued Wright. “And then once you find the truth, it is your obligation to get it out. Because what is happening now, is that you will be in the position of power. You will be the gatekeepers, the lawyers, the judges, etc. And it all starts right here.”"
+    },
+    {
+      "type": "text",
+      "value": "<i>This article is part 1 of a three-part Spectator series, which covers</i><b><i> police accountability and misconduct. </i></b><i>Read part 2, which publishes on Friday, for more information about how NYPD responds to police misconduct complaints.</i>"
+    },
+    {
+      "type": "text",
+      "value": "<i>Andrew Park and Melissa Wang are Graphics fellows at Spectator. To learn more about the Spectator Summer Fellowship program, click </i><a href=\"http://www.specpublishing.com/summer-fellowship\"><i>here</i></a><a href=\"http://www.specpublishing.com/summer-fellowship\"><i>.</i></a><i> </i>"
+    },
+    {
+      "type": "text",
+      "value": "<i>Raeedah Wahid is the Graphics editor at Spectator. She can be contacted at </i><a href=\"mailto:raeedah.wahid@columbiaspectator.com\"><i>raeedah.wahid@columbiaspectator.com</i></a><i>. Follow her on Twitter </i><a href=\"https://twitter.com/raeedahwahid\"><i>@raeedahwahid</i></a><i>.</i>"
+    }
+  ],
+  "footer": "See our data <a href=\"https://github.com/graphicsdesk/nypd-complaints-data\"><b>here</b></a>.\n\nThe data for this project was sourced from the historic and current NYPD Complaints and Arrests datasets, available on <a href=\"https://opendata.cityofnewyork.us\">NYC OpenData</a>. The datasets are provided by the NYPD and reviewed by the NYPD’s Office of Management Analysis and Planning.\n\nThe datasets are updated on a quarterly basis. The most recent updates of the datasets, which occurred in mid-July, includes data up to the end of June this year. \n\nAs various arrests and complaints were missing race data of the parties involved, we have omitted such records from our calculations."
+}

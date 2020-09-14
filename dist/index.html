@@ -1,0 +1,1031 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>NYPD data reveals long-standing racial biases. Even with calls for racial equality, police arrest records show no change.</title>
+    <link rel="stylesheet" href="/styles.164d45a1.css">
+    <link rel="shortcut icon" href="https://www.columbiaspectator.com/pb/resources/img/CDS_Favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+
+    <div class="story-top">
+      
+        
+            <div class="graphic">
+              
+                <!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" type="text/javascript"></script>
+
+    <style>body {
+            font-family: Georgia, Times, "Times New Roman", serif;
+        }
+
+        section {
+            position: relative;
+            padding: 1rem;
+            margin-bottom: 300px;
+        }
+
+        main {
+            background-color: black;
+            padding-bottom: 30rem;
+            padding-top: 20rem;
+        }
+
+        article {
+            position: relative;
+            max-width: 38rem;
+            margin: 0 auto;
+            padding-top: 50%;
+        }
+
+        figure {
+            position: -webkit-sticky;
+            position: sticky;
+            width: 90%;
+            margin: 0 auto;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            z-index: 0;
+        }
+
+        .step {
+            background-color: white;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 21rem;
+
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step p {
+            text-align: center;
+            padding: 1rem;
+            font-size: 21px;
+            line-height: 1.6;
+            font-family: Georgia, Times, "Times New Roman", serif;
+        }
+
+        #question {
+            max-width: 38rem;
+           margin-left: auto;
+           margin-right: auto;
+           margin-bottom: 0;
+           margin-top: 50%;
+            
+        }
+        #questionText {
+            color: white;
+            font-family: Georgia,Times,Times New Roman,serif; 
+            font-size: 50px;
+            line-height: 1.5;
+            text-align: center;
+        }</style>
+</head>
+
+<body>
+    <main>
+        <section id="scrolly1">
+            <figure id="firstIMG">
+                <img src="/leadIn1.7036183f.svg">
+            </figure>
+
+            <article>
+                <div class="step" data-step="1">
+                    <p> In the last 10 years, over 470,000 Manhattan-based complaints with definitive suspect race
+                        descriptions were filed to the NYPD.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly2">
+            <figure>
+                <img src="/leadIn2.a0bcb670.svg">
+            </figure>
+
+            <article>
+                <div class="step" data-step="1">
+                    <p>As of July 15, 2020, 233,445—nearly half—of these complaints are directed towards Black suspects.
+                    </p>
+                </div>
+                <div class="step" data-step="2">
+                    <p>In Precincts 26 and 30, which services Morningside Heights and West Harlem, the percentage
+                        increases to 55.62%. </p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly3">
+            <figure>
+                <img src="/leadIn3.90d7c2e6.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p>On May 25, 2020, George Floyd, a Black man, met an untimely death at the hands of four non-Black
+                        Minneapolis policemen.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly4">
+            <figure>
+                <img src="/leadIn4.e9c5f7b8.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p>In the following weeks, civil rights activists organized a series of protests that marked the
+                        resurgence of the Black Lives Matter movement. Hundreds of thousands of protestors across the
+                        world marched in solidarity against centuries-long racism and
+                        state-sanctioned violence toward Black communities.</p>
+                </div>
+            </article>
+        </section>
+        <section id="scrolly5">
+            <figure>
+                <img src="/leadIn5.20ee2523.svg">
+            </figure>
+            <article>
+                <div class="step" data-step="1">
+                    <p> <b>These are not new issues</b> — they have been rampant in the Columbia and West Harlem
+                        communities, since the 1968 protests.
+                        The NYPD is not foreign to being criticized for their supposed racial biases, but the question
+                        stands: </p>
+                </div>
+            </article>
+        </section>
+        <div id="question">
+            <p id="questionText"> Have city-wide protests successfully shifted systemic racism in the NYPD by reducing
+                racially-charged police brutality? </p>
+        </div>
+    </main>
+    
+    <script id="1">var main = d3.select("main");
+var scrolly1 = main.select("#scrolly1");
+var figure1 = scrolly1.select("figure");
+var article1 = scrolly1.select("article");
+var step1 = article1.selectAll(".step");
+var scroller = scrollama();
+
+function handleResize() {
+  // 1. update height of step elements
+  var stepH = Math.floor(window.innerHeight * 0.75);
+  step1.style("height", stepH + "px");
+  var figureHeight = window.innerHeight / 2;
+  var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+  figure1.style("height", figureHeight + "px").style("top", figureMarginTop + "px"); // 3. tell scrollama to update new element dimensions
+
+  scroller.resize();
+}
+
+function handleStepEnter(response) {
+  // add color to current step only
+  console.log(response.index);
+  step1.classed("is-active", function (d, i) {
+    return i === response.index;
+  });
+}
+
+function setupStickyfill() {
+  d3.selectAll(".sticky").each(function () {
+    Stickyfill.add(this);
+  });
+}
+
+function init() {
+  setupStickyfill();
+  handleResize();
+  scroller.setup({
+    step: "#scrolly1 article .step",
+    offset: 0.3,
+    debug: false
+  }).onStepEnter(handleStepEnter);
+  window.addEventListener("resize", handleResize);
+}
+
+init();</script>
+    <script id="2">var main = d3.select("main");
+var scrolly2 = main.select("#scrolly2");
+var figure2 = scrolly2.select("figure");
+var article2 = scrolly2.select("article");
+var step2 = article2.selectAll(".step");
+var scroller = scrollama();
+
+function handleResize() {
+  // 1. update height of step elements
+  var stepH = Math.floor(window.innerHeight * 0.75);
+  step2.style("height", stepH + "px");
+  var figureHeight = window.innerHeight / 2;
+  var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+  figure2.style("height", figureHeight + "px").style("top", figureMarginTop + "px"); // 3. tell scrollama to update new element dimensions
+
+  scroller.resize();
+}
+
+function handleStepEnter(response) {
+  // add color to current step only
+  console.log(response.index);
+  step2.classed("is-active", function (d, i) {
+    return i === response.index;
+  });
+}
+
+function setupStickyfill() {
+  d3.selectAll(".sticky").each(function () {
+    Stickyfill.add(this);
+  });
+}
+
+function init() {
+  setupStickyfill();
+  handleResize();
+  scroller.setup({
+    step: "#scrolly1 article .step",
+    offset: 0.3,
+    debug: false
+  }).onStepEnter(handleStepEnter);
+  window.addEventListener("resize", handleResize);
+}
+
+init();</script>
+    <script id="3">var main = d3.select("main");
+var scrolly3 = main.select("#scrolly3");
+var figure3 = scrolly3.select("figure");
+var article3 = scrolly3.select("article");
+var step3 = article3.selectAll(".step");
+var scroller = scrollama();
+
+function handleResize() {
+  // 1. update height of step elements
+  var stepH = Math.floor(window.innerHeight * 0.75);
+  step3.style("height", stepH + "px");
+  var figureHeight = window.innerHeight / 2;
+  var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+  figure3.style("height", figureHeight + "px").style("top", figureMarginTop + "px"); // 3. tell scrollama to update new element dimensions
+
+  scroller.resize();
+}
+
+function handleStepEnter(response) {
+  // add color to current step only
+  console.log(response.index);
+  step3.classed("is-active", function (d, i) {
+    return i === response.index;
+  });
+}
+
+function setupStickyfill() {
+  d3.selectAll(".sticky").each(function () {
+    Stickyfill.add(this);
+  });
+}
+
+function init() {
+  setupStickyfill();
+  handleResize();
+  scroller.setup({
+    step: "#scrolly1 article .step",
+    offset: 0.5,
+    debug: false
+  }).onStepEnter(handleStepEnter);
+  window.addEventListener("resize", handleResize);
+}
+
+init();</script>
+    <script id="4">var main = d3.select("main");
+var scrolly4 = main.select("#scrolly4");
+var figure4 = scrolly4.select("figure");
+var article4 = scrolly4.select("article");
+var step4 = article4.selectAll(".step");
+var scroller = scrollama();
+
+function handleResize() {
+  // 1. update height of step elements
+  var stepH = Math.floor(window.innerHeight * 0.75);
+  step4.style("height", stepH + "px");
+  var figureHeight = window.innerHeight / 2;
+  var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+  figure4.style("height", figureHeight + "px").style("top", figureMarginTop + "px"); // 3. tell scrollama to update new element dimensions
+
+  scroller.resize();
+}
+
+function handleStepEnter(response) {
+  // add color to current step only
+  console.log(response.index);
+  step4.classed("is-active", function (d, i) {
+    return i === response.index;
+  });
+}
+
+function setupStickyfill() {
+  d3.selectAll(".sticky").each(function () {
+    Stickyfill.add(this);
+  });
+}
+
+function init() {
+  setupStickyfill();
+  handleResize();
+  scroller.setup({
+    step: "#scrolly1 article .step",
+    offset: 0.5,
+    debug: false
+  }).onStepEnter(handleStepEnter);
+  window.addEventListener("resize", handleResize);
+}
+
+init();</script>
+    <script id="5">var main = d3.select("main");
+var scrolly5 = main.select("#scrolly5");
+var figure5 = scrolly5.select("figure");
+var article5 = scrolly5.select("article");
+var step5 = article5.selectAll(".step");
+var scroller = scrollama();
+
+function handleResize() {
+  // 1. update height of step elements
+  var stepH = Math.floor(window.innerHeight * 0.75);
+  step5.style("height", stepH + "px");
+  var figureHeight = window.innerHeight / 2;
+  var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+  figure5.style("height", figureHeight + "px").style("top", figureMarginTop + "px"); // 3. tell scrollama to update new element dimensions
+
+  scroller.resize();
+}
+
+function handleStepEnter(response) {
+  // add color to current step only
+  console.log(response.index);
+  step5.classed("is-active", function (d, i) {
+    return i === response.index;
+  });
+}
+
+function setupStickyfill() {
+  d3.selectAll(".sticky").each(function () {
+    Stickyfill.add(this);
+  });
+}
+
+function init() {
+  setupStickyfill();
+  handleResize();
+  scroller.setup({
+    step: "#scrolly1 article .step",
+    offset: 0.5,
+    debug: false
+  }).onStepEnter(handleStepEnter);
+  window.addEventListener("resize", handleResize);
+}
+
+init();</script>
+</body>
+              </div>
+          
+      
+    </div>
+
+    
+      <header class="g-body">
+  <h1 id="headline">NYPD data reveals long-standing racial biases. Even with calls for racial equality, police arrest records show no change.</h1>
+  <p class="byline inline-credits">
+    
+      <span>By <a href="https://www.columbiaspectator.com/contributors/Andrew-Park/">Andrew Park</a> and <a href="https://www.columbiaspectator.com/contributors/Melissa-Wang/">Melissa Wang</a></span>
+    
+      <span>Edited by <a href="https://www.columbiaspectator.com/contributors/Raeedah-Wahid/">Raeedah Wahid</a></span>
+    
+  </p>
+  <p class="pub-date">September 9, 2020</p>
+</header>
+
+    <div class="story">
+      
+        
+            <p class="g-body paragraph ">
+  The New York Police Department is no stranger to claims of racial discrimination between its officers and the people they are meant to protect.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  For West Harlem, Columbia stands at the heart of these racial tensions. In <a href="https://www.columbiaspectator.com/multimedia/visualizing-1968/">1968</a>, protests over the University’s proposal to build a gym in Morningside Heights—which included what residents called a “Jim Crow” entrance for Harlem residents—led to arrests and violence enacted from NYPD. In 2019, tensions arose following the death of Tess Majors, a first-year Barnard student, who was fatally stabbed in Morningside Park. The incident brought forth discussions of these <a href="https://www.columbiaspectator.com/news/2020/01/22/morningside-park-is-essential-to-harlems-identity-how-has-the-university-misunderstood-resident-challenges-in-the-public-space/">racial tensions</a> to the forefront of the community’s consciousness. In each conversation, a common thread was revealed: NYPD did not understand how to navigate its position with the community.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Conversations of over policing have long existed in the community. The 1989 Central Park Five case where Black East Harlem teenagers were targeted and coerced to plead guilty to a crime they were later found falsely accused reaffirmed resident’s mistrust of the NYPD.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  [Related: <a href="https://www.columbiaspectator.com/news/2019/06/13/central-park-five-prosecutor-elizabeth-lederer-resigns-from-law-school-lecturer-position-citing-public-response/">‘Central Park Five’ prosecutor Elizabeth Lederer resigns from Law School lecturer position, citing public response</a>]
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  And in recent memory, hundreds of police officers stormed <a href="https://www.columbiaspectator.com/news/2014/06/11/after-harlem-gang-raid-anti-violence-advocates-seek-defuse-tensions/">Grant Housing</a> in 2014 for what became the city’s largest ever gang raid. Relatives and neighbors were arrested, leaving a feeling of distrust and fear.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  In order to assess the racial disrimination charges against the NYPD, Spectator analyzed public NYPD <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i">complaint</a> and <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u">arrest</a> records dating from 2006 to 2020.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Both record pools revealed evidence of racial bias: in the Morningside Heights and West Harlem area alone, the percentage of Black suspects was 55.6%, where Black people only comprise 21.5% of the area’s total population. In contrast, white suspects only make up 6.1% of the suspect pool, even though white people make up 27.6% of the total population.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Although the criminal and complaint data may suggest that Black individuals commit more crimes than their white counterparts, this trend is not necessarily an accurate one. Wright said that this inaccuracy stems from the under-reporting of crimes against Black people as well as the systemic racism present in the police force.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “[Racial policing] has been meshed into our society to look normal,” said Robert Wright, a research assistant at Columbia University’s Social Relations Lab, who has written essays depicting his experiences with the justice system.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “Anything you see now is not new…. Can you imagine the atrocities when no one is looking, when we didn’t know the economics of these systems? Police have been a tool of oppression since they let us out of jails.”
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Based on the data, Spectator found a possible presence of systemic racism within the police force, an issue which has sparked numerous protests across the city. In light of the recent murder of George Floyd, protestors continue to take to the streets to call for racial equality, demanding an end to police brutality and misconduct.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  However, in looking at recent as well as previous periods of protests, Spectator has found that NYPD racially biased arrest behavior has not changed amid the protests.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  To better understand the racial disparity in policing, Spectator formed a Racial Disparity Index (RDI) metric. This metric divides the portion of Black arrests by complaints, specifically complaints filed against Black suspects concerning felony, misdemeanor and violation crimes. An RDI value of less than 1 indicates more complaints against Black people than arrests, whereas a value greater than 1 shows more arrests than complaints.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Since the death of George Floyd in May this year, protests against police brutality and calls for racial equality have spread across the country. While the protests have resulted in government action, as the police who murdered Floyd have been <a href="https://www.nytimes.com/2020/05/29/us/minneapolis-police-george-floyd.html">charged</a> and New York City mayor Bill de Blasio has <a href="https://twitter.com/NYCMayor/status/1269718728305934337?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1269718728305934337%7Ctwgr%5E&ref_url=https%3A%2F%2Fwww.businessinsider.com%2F13-concrete-changes-sparked-by-george-floyd-protests-so-far-2020-6">pledged</a> to shift NYPD funds to youth and social programs, it is difficult to determine whether this trend of changes will last.
+</p>
+
+          
+      
+        
+            <div class="graphic">
+              
+                <head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/newTime.1a971a8d.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <style>@font-face {
+            font-family: Graphik-Bold;
+            src: url(/Graphik-Bold.f2fa27f7.woff);
+        }
+
+        @font-face {
+            font-family: Graphik-Regular;
+            src: url(/Graphik-Regular.c1f8d1a3.woff);
+        }
+        .timeline__content-title {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 45px;
+            margin: -10px 0 0 0;
+            transition: 0.4s;
+            padding: 0 10px;
+            box-sizing: border-box;
+            font-weight: bold;
+            color: #DAA520;
+        }
+
+        .timeline__content-desc {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-weight: normal;
+            margin: 0;
+            font-size: 25px;
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.6;
+        }
+
+        .timeline-header__title {
+            color: #DAA520;
+            font-size: 46px;
+            font-family: Georgia, Times, "Times New Roman", serif;
+            margin: 0;
+        }
+
+        p {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 25px;
+            line-height: 1.6;
+        }</style>
+<script src="/styles.164d45a1.js"></script><script src="/newTime.1a971a8d.js"></script></head>
+
+<body>
+
+    <div class="timeline-container" id="timeline-1">
+
+        <div class="timeline-header">
+            <h2 class="timeline-header__title">Protests & RDI</h2>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img" src="https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F150224142538-nr-trayvon-martin-vo-2.jpg">
+                    <!--source: CNN-->
+                    <h2 class="timeline__content-title">Feb. 26, 2012</h2>
+                    <p class="timeline__content-desc">Trayvon Martin, a 17-year old Black teenager, is shot in Florida
+                        by neighborhood watch volunteer George Zimmerman.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img" src="https://live.staticflickr.com/7268/6858755788_42a98f0f24_b.jpg">
+                    <!--source: Flickr-->
+                    <h2 class="timeline__content-title">Mar. 1 - Apr. 6, 2012</h2>
+                    <p class="timeline__content-desc">Protestors across the country
+                        take to the streets in response to Martin's murder, calling for
+                        Zimmerman's arrest.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="/chart1.f25330a5.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">RDI trends in CD 9 reached 1.50 almost immediately before Martin's
+                        death.
+                        However, once the protests began, the RDI decreased significantly. It is unclear whether the
+                        protests were the sole cause of the dip in RDI (and thus, a dip in the arrests and complaints
+                        filed against Black people within CD 9). The RDI also appears to slowly increase after the first
+                        few weeks of protests.
+
+                    </p><p style="font-weight: bold; color: rgba(255, 255, 255, .7);"> This suggests that
+                        although the
+                        protests may minimize the arrest/
+                        complaint numbers of Black people, the trend does not last.</p>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img" src="https://progressivecynic.files.wordpress.com/2013/07/zimmerman.jpg">
+                    <!--Progressive Cynic-->
+                    <h2 class="timeline__content-title">Jul. 13, 2013</h2>
+                    <p class="timeline__content-desc">Zimmerman is acquitted in the death of Trayvon Martin.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img" src="https://static01.nyt.com/images/2013/07/14/us/video-zimmerman-verdict-reax/video-zimmerman-verdict-reax-superJumbo.jpg">
+                    <!--NY Times-->
+                    <h2 class="timeline__content-title">Jul. 14, 2013</h2>
+                    <p class="timeline__content-desc">
+                        Country-wide protests resurge as protestors demand justice for Martin.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="/chart2.56bf9439.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">
+                        Although CD 9's RDI decreases to 0.9 during the first week of protest, </p>
+
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);">this dip in the
+                        arrest of
+                        Black people does not last either.</p>
+
+                    <p class="timeline__content-desc">
+                        Manhattan's overall RDI is more difficult to explain due to
+                        its more volatile fluctuations.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="ERIC GARNER">
+                <div class="timeline__content"><img class="timeline__img" src="https://a.scpr.org/i/209e8942221a56194fda108cdc2dedd6/96464-full.jpg">
+                    <!--KPCC-->
+                    <h2 class="timeline__content-title">Jul. 17, 2014</h2>
+                    <p class="timeline__content-desc">Eric Garner, a 43-year old Black man, is choked & killed by NYPD
+                        officer
+                        Daniel Pantaleo.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="ERIC GARNER">
+                <div class="timeline__content"><img class="timeline__img" src="https://static01.nyt.com/images/2014/12/05/nyregion/PROTEST-metro-ss-slide-1DLN/PROTEST-metro-ss-slide-1DLN-superJumbo.jpg">
+                    <!--NY Times-->
+                    <h2 class="timeline__content-title">Jul. 2014</h2>
+                    <p class="timeline__content-desc">
+                        Protestors demand justice for Garner as a grand jury fails to indict Pantaleo for Garner's
+                        murder.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="ERIC GARNER">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="/chart3.3ff0df62.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">
+                        The arrest and complaint numbers against Black people were already fluctuating weeks before
+                        the protests, suggesting again how the protests may not have played a significant factor in
+                        decreasing the numbers.
+                    </p>
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);">Although CD9's
+                        RDI decreases for the first two weeks of protests, the number greatly
+                        increases afterwards.</p>
+                    <p class="timeline__content-desc">
+                        Again, Manhattan's overall RDI is too volatile to say for certain that the protests had an
+                        impact on decreasing the arrests and complaints against people of the Black community.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="FREDDIE GRAY">
+                <div class="timeline__content"><img class="timeline__img" src="https://ichef.bbci.co.uk/news/410/media/images/82473000/jpg/_82473734_freddiegrayphoto.jpg">
+                    <!--BBC-->
+                    <h2 class="timeline__content-title">Apr. 18, 2015</h2>
+                    <p class="timeline__content-desc">Freddie Gray, a 25-year old Black man, is killed in police custody
+                        in Baltimore, Maryland.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="FREDDIE GRAY">
+                <div class="timeline__content"><img class="timeline__img" src="https://pyxis.nymag.com/v1/imgs/5d6/824/8463c866a19d6c5f13ab8d2429a07f085a-30-freddie-gray-nyc-protests-009.h473.w710.jpg">
+                    <!--NY Mag-->
+                    <h2 class="timeline__content-title">Apr. 19, 2015</h2>
+                    <p class="timeline__content-desc">
+                        Protests over Gray's murder begin, spreading all across the country.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="FREDDIE GRAY">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="/chart4.775643f5.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">In CD 9, the RDI trend is more unique than in previous protest
+                        periods. Rather than decline, the RDI trend maintains a plateau until it finally dips between
+                        the second and third weeks of protest. Once again, it is likely that protests are not the only
+                        cause of declining arrests.
+
+                        Manhattan's overall RDI remains more or less stable,</p>
+
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);"> suggesting that
+                        the 2015 protests did not
+                        have a great impact on the arrest of Black people during this time.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="GEORGE FLOYD">
+                <div class="timeline-content">
+                    <img class="timeline__img" src="https://static01.nyt.com/images/2020/05/27/us/27georgefloyd/27georgefloyd-superJumbo.jpg">
+                    <!--NYT-->
+                    <h2 class="timeline__content-title"> May 25, 2020</h2>
+                    <p class="timeline__content-desc">
+                        George Floyd, a 46-year old Black man, is killed by Minneapolis police officers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="GEORGE FLOYD">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="https://nypost.com/wp-content/uploads/sites/2/2020/05/george-floyd-protest-de-blasio.jpg?quality=80&strip=all&w=618&h=410&crop=1">
+                    <!--NY Post-->
+                    <h2 class="timeline__content-title"> May 27, 2020 - present</h2>
+                    <p class="timeline__content-desc">
+                        Protests across the country continue to honor Floyd & demand an end to systemic racism.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="GEORGE FLOYD">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="/chart5.eacabe56.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">
+                        CD 9's RDI trend around the first weeks of protest honouring Floyd are difficult to interpret.
+                        Although the RDI is less than 1.00 during this period, it had already reached this value in the
+                        weeks before. While taking other factors into account,
+                    </p><p style="font-weight: bold; color: rgba(255, 255, 255, .7);"> it appears that
+                        the protests are
+                        failing
+                        to alleviate the criminalisation of Black people, as the RDI increases once again.
+                    </p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>(function ($) {
+  $.fn.timeline = function () {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css("background-image", "url(" + selectors.item.first().find(selectors.img).attr("src") + ")");
+    var itemLength = selectors.item.length;
+    $(window).scroll(function () {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function (i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css("background-image", "url(" + selectors.item.last().find(selectors.img).attr("src") + ")");
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css("background-image", "url(" + $(this).find(selectors.img).attr("src") + ")");
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();</script>
+</body>
+              </div>
+          
+      
+        
+            <p class="g-body paragraph ">
+  Based on RDI trends from five distinct periods of protest in both CD 9 and overall Manhattan, it is strongly arguable that the BLM protests have yet to significantly minimize the arrests and complaint numbers against Black people.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “I think this is where we [Black people] lose in this country,” Wright said. “We lose momentum because we think systemic racism [is going to] go overnight… we think, ‘just do this, and now you [can] deprogram centuries of superiority.’”
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  <b>  </b>
+</p>
+
+          
+      
+        
+            <p class="g-body subhed">Racial Trends Continue to be Apparent in Neighbourhoods Besides West Harlem</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Past tensions of over policing coincide with data showing that, in the last 10 years, the Black population makes up over half of both the suspect and criminal population in West Harlem,  suggesting that racial bias has an influence on policing behavior in West Harlem.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  However, it isn’t just West Harlem suffering from a possible racial bias in their policing system. In the Bronx, crime data suggests similar racial trends.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  In Bronx’s CD11, which has similar racial demographics, economic backgrounds, and education levels as West Harlem, black suspects again comprise approximately half of the suspect pool in both districts.
+</p>
+
+          
+      
+        
+            <p class="g-body subhed">Racial demographics</p>
+
+          
+      
+        
+            <div class="graphic">
+              </div>
+          
+      
+        
+            <p class="g-body subhed">Proportion of Black Suspects</p>
+
+          
+      
+        
+            <div class="graphic">
+              </div>
+          
+      
+        
+            <p class="g-body subhed">Proportion of White Suspects</p>
+
+          
+      
+        
+            <div class="graphic">
+              </div>
+          
+      
+        
+            <p class="g-body paragraph ">
+  Racial bias among the police is not the only factor that can result in such trends, according to Wright.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “There’s no particular crime in which a set of ethnicities chooses to commit - there are always a few ingredients to criminality, such as [lack of social services], poverty [and] drugs,” Wright said.
+</p>
+
+          
+      
+        
+            <p class="g-body subhed">Conclusion</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Besides the influence of other factors, the incomplete nature of policing data makes it difficult to depict completely accurate trends.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  For example, the  significant number of “unknowns” listed under suspect’s race overpopulates the data.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “[When] a person reports a crime but doesn’t know who committed the crime, they cannot report to the police what race that [criminal] is,” explained Daniel Bodah, a research fellow at the Vera Institute of Justice and former investigator for the Civilian Complaint Review Board. “A lot of records come from police who encounter a situation while they’re driving around, or from a 911 call. The police fill out  a complaint report [...] and then those are given to detectives to investigate [...] but in many cases, they may never know information about who the suspect is.”
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  Furthermore, mistrust of police systems and fear of retaliation may result in reluctance to report complaints among Black residents, Wright added.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  <b>Even with what is made available or public, data suggests little change in arrest or complaint demographics even after calls for police accountability. </b>
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  While protests haven’t shown conclusive changes in NYPD arrest and conduct behavior, community members say changes are underway to eradicate systemic racism, albeit slow-going.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “The disconnect is being revisited,” stated Bodah. “For instance, at the peak of stop-and-frisks, they [the police] did that more than 600,000 times in a single year. [But] the statistics looked very skewed, and so there was a lawsuit brought against the NYPD saying these stops were based on race and that was constitutional[...] and when the judge issued her ruling, she pointed out that the defense actually admitted that that they were making stops based on race [...] so stop-and-frisk in New York City is used much less frequently now.”
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “Now when you have a situation like George Floyd, everyone’s on high alert,” said Derrick Haynes, a vocal anti-violence activist, on the subject of change in the police force. “There’s a different awareness and feeling now among police. I’m watching and they’re communicating with the community now. They’re holding conversations with people in the community, I see there’s a better line of communication. I’ve never seen this line of communication before.”
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  In terms of whether or not the BLM protests can create real change, Wright said that this year’s protests may be different.
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “It seems like this generation is more morally obligated - when you decide that something is wrong, [you] do something about it. That’s the difference.”
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  “It’s your duty to research [the truth],” continued Wright. “And then once you find the truth, it is your obligation to get it out. Because what is happening now, is that you will be in the position of power. You will be the gatekeepers, the lawyers, the judges, etc. And it all starts right here.”
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  <i>This article is part 1 of a three-part Spectator series, which covers</i><b><i> police accountability and misconduct. </i></b><i>Read part 2, which publishes on Friday, for more information about how NYPD responds to police misconduct complaints.</i>
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  <i>Andrew Park and Melissa Wang are Graphics fellows at Spectator. To learn more about the Spectator Summer Fellowship program, click </i><a href="http://www.specpublishing.com/summer-fellowship"><i>here</i></a><a href="http://www.specpublishing.com/summer-fellowship"><i>.</i></a><i> </i>
+</p>
+
+          
+      
+        
+            <p class="g-body paragraph ">
+  <i>Raeedah Wahid is the Graphics editor at Spectator. She can be contacted at </i><a href="mailto:raeedah.wahid@columbiaspectator.com"><i>raeedah.wahid@columbiaspectator.com</i></a><i>. Follow her on Twitter </i><a href="https://twitter.com/raeedahwahid"><i>@raeedahwahid</i></a><i>.</i>
+</p>
+
+          
+      
+    </div>
+
+    <div class="spectate-dev-footer">
+      <a href="https://docs.google.com/document/d/1fN1oAM94yM3A_uMkSyaBQkhpGSM6GcOvB4HAtgE312s/edit" target="_blank">Doc</a>
+    </div>
+
+    <div class="footer g-body">
+  <div class="article-credits">
+    
+      <p>See our data <a href="https://github.com/graphicsdesk/nypd-complaints-data"><b>here</b></a>.</p>
+    
+      <p></p>
+    
+      <p>The data for this project was sourced from the historic and current NYPD Complaints and Arrests datasets, available on <a href="https://opendata.cityofnewyork.us">NYC OpenData</a>. The datasets are provided by the NYPD and reviewed by the NYPD’s Office of Management Analysis and Planning.</p>
+    
+      <p></p>
+    
+      <p>The datasets are updated on a quarterly basis. The most recent updates of the datasets, which occurred in mid-July, includes data up to the end of June this year. </p>
+    
+      <p></p>
+    
+      <p>As various arrests and complaints were missing race data of the parties involved, we have omitted such records from our calculations.</p>
+    
+    <p>
+      Produced with
+      <a href="https://github.com/graphicsdesk/spectate">Spectate</a> by the
+      <a href="https://graphicsdesk.github.io">Spectator Graphics</a> team.
+    </p>
+  </div>
+</div>
+
+
+    <script src="/script.75da7f30.js"></script>
+  </body>
+</html>
