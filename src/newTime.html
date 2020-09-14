@@ -1,0 +1,319 @@
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="newTime.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <style>
+
+        @font-face {
+            font-family: Graphik-Bold;
+            src: url(graphik/Graphik-Bold.woff);
+        }
+
+        @font-face {
+            font-family: Graphik-Regular;
+            src: url(graphik/Graphik-Regular.woff);
+        }
+        .timeline__content-title {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 45px;
+            margin: -10px 0 0 0;
+            transition: 0.4s;
+            padding: 0 10px;
+            box-sizing: border-box;
+            font-weight: bold;
+            color: #DAA520;
+        }
+
+        .timeline__content-desc {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-weight: normal;
+            margin: 0;
+            font-size: 25px;
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.6;
+        }
+
+        .timeline-header__title {
+            color: #DAA520;
+            font-size: 46px;
+            font-family: Georgia, Times, "Times New Roman", serif;
+            margin: 0;
+        }
+
+        p {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 25px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="timeline-container" id="timeline-1">
+
+        <div class="timeline-header">
+            <h2 class="timeline-header__title">Protests & RDI</h2>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F150224142538-nr-trayvon-martin-vo-2.jpg">
+                    <!--source: CNN-->
+                    <h2 class="timeline__content-title">Feb. 26, 2012</h2>
+                    <p class="timeline__content-desc">Trayvon Martin, a 17-year old Black teenager, is shot in Florida
+                        by neighborhood watch volunteer George Zimmerman.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://live.staticflickr.com/7268/6858755788_42a98f0f24_b.jpg">
+                    <!--source: Flickr-->
+                    <h2 class="timeline__content-title">Mar. 1 - Apr. 6, 2012</h2>
+                    <p class="timeline__content-desc">Protestors across the country
+                        take to the streets in response to Martin's murder, calling for
+                        Zimmerman's arrest.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content">
+                    <img class="timeline__img" src = "assets/chart1.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">RDI trends in CD 9 reached 1.50 almost immediately before Martin's
+                        death.
+                        However, once the protests began, the RDI decreased significantly. It is unclear whether the
+                        protests were the sole cause of the dip in RDI (and thus, a dip in the arrests and complaints
+                        filed against Black people within CD 9). The RDI also appears to slowly increase after the first
+                        few weeks of protests.
+
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);"> This suggests that
+                        although the
+                        protests may minimize the arrest/
+                        complaint numbers of Black people, the trend does not last.</p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://progressivecynic.files.wordpress.com/2013/07/zimmerman.jpg">
+                    <!--Progressive Cynic-->
+                    <h2 class="timeline__content-title">Jul. 13, 2013</h2>
+                    <p class="timeline__content-desc">Zimmerman is acquitted in the death of Trayvon Martin.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://static01.nyt.com/images/2013/07/14/us/video-zimmerman-verdict-reax/video-zimmerman-verdict-reax-superJumbo.jpg">
+                    <!--NY Times-->
+                    <h2 class="timeline__content-title">Jul. 14, 2013</h2>
+                    <p class="timeline__content-desc">
+                        Country-wide protests resurge as protestors demand justice for Martin.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="TRAYVON MARTIN">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="assets/chart2.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">
+                        Although CD 9's RDI decreases to 0.9 during the first week of protest, </p>
+
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);">this dip in the
+                        arrest of
+                        Black people does not last either.</p>
+
+                    <p class="timeline__content-desc">
+                        Manhattan's overall RDI is more difficult to explain due to
+                        its more volatile fluctuations.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="ERIC GARNER">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://a.scpr.org/i/209e8942221a56194fda108cdc2dedd6/96464-full.jpg">
+                    <!--KPCC-->
+                    <h2 class="timeline__content-title">Jul. 17, 2014</h2>
+                    <p class="timeline__content-desc">Eric Garner, a 43-year old Black man, is choked & killed by NYPD
+                        officer
+                        Daniel Pantaleo.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="ERIC GARNER">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://static01.nyt.com/images/2014/12/05/nyregion/PROTEST-metro-ss-slide-1DLN/PROTEST-metro-ss-slide-1DLN-superJumbo.jpg">
+                    <!--NY Times-->
+                    <h2 class="timeline__content-title">Jul. 2014</h2>
+                    <p class="timeline__content-desc">
+                        Protestors demand justice for Garner as a grand jury fails to indict Pantaleo for Garner's
+                        murder.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="ERIC GARNER">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="assets/chart3.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">
+                        The arrest and complaint numbers against Black people were already fluctuating weeks before
+                        the protests, suggesting again how the protests may not have played a significant factor in
+                        decreasing the numbers.
+                    </p>
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);">Although CD9's
+                        RDI decreases for the first two weeks of protests, the number greatly
+                        increases afterwards.</p>
+                    <p class="timeline__content-desc">
+                        Again, Manhattan's overall RDI is too volatile to say for certain that the protests had an
+                        impact on decreasing the arrests and complaints against people of the Black community.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="FREDDIE GRAY">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://ichef.bbci.co.uk/news/410/media/images/82473000/jpg/_82473734_freddiegrayphoto.jpg">
+                    <!--BBC-->
+                    <h2 class="timeline__content-title">Apr. 18, 2015</h2>
+                    <p class="timeline__content-desc">Freddie Gray, a 25-year old Black man, is killed in police custody
+                        in Baltimore, Maryland.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="FREDDIE GRAY">
+                <div class="timeline__content"><img class="timeline__img"
+                        src="https://pyxis.nymag.com/v1/imgs/5d6/824/8463c866a19d6c5f13ab8d2429a07f085a-30-freddie-gray-nyc-protests-009.h473.w710.jpg">
+                    <!--NY Mag-->
+                    <h2 class="timeline__content-title">Apr. 19, 2015</h2>
+                    <p class="timeline__content-desc">
+                        Protests over Gray's murder begin, spreading all across the country.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item" data-text="FREDDIE GRAY">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="assets/chart4.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">In CD 9, the RDI trend is more unique than in previous protest
+                        periods. Rather than decline, the RDI trend maintains a plateau until it finally dips between
+                        the second and third weeks of protest. Once again, it is likely that protests are not the only
+                        cause of declining arrests.
+
+                        Manhattan's overall RDI remains more or less stable,</p>
+
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);"> suggesting that
+                        the 2015 protests did not
+                        have a great impact on the arrest of Black people during this time.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="GEORGE FLOYD">
+                <div class="timeline-content">
+                    <img class="timeline__img"
+                        src="https://static01.nyt.com/images/2020/05/27/us/27georgefloyd/27georgefloyd-superJumbo.jpg">
+                    <!--NYT-->
+                    <h2 class="timeline__content-title"> May 25, 2020</h2>
+                    <p class="timeline__content-desc">
+                        George Floyd, a 46-year old Black man, is killed by Minneapolis police officers.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="GEORGE FLOYD">
+                <div class="timeline__content">
+                    <img class="timeline__img"
+                        src="https://nypost.com/wp-content/uploads/sites/2/2020/05/george-floyd-protest-de-blasio.jpg?quality=80&strip=all&w=618&h=410&crop=1">
+                    <!--NY Post-->
+                    <h2 class="timeline__content-title"> May 27, 2020 - present</h2>
+                    <p class="timeline__content-desc">
+                        Protests across the country continue to honor Floyd & demand an end to systemic racism.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-text="GEORGE FLOYD">
+                <div class="timeline__content">
+                    <img class="timeline__img" src="assets/chart5.png">
+                    <h2 class="timeline__content-title">RDI</h2>
+                    <p class="timeline__content-desc">
+                        CD 9's RDI trend around the first weeks of protest honouring Floyd are difficult to interpret.
+                        Although the RDI is less than 1.00 during this period, it had already reached this value in the
+                        weeks before. While taking other factors into account,
+                    <p style="font-weight: bold; color: rgba(255, 255, 255, .7);"> it appears that
+                        the protests are
+                        failing
+                        to alleviate the criminalisation of Black people, as the RDI increases once again.
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        (function ($) {
+            $.fn.timeline = function () {
+                var selectors = {
+                    id: $(this),
+                    item: $(this).find(".timeline-item"),
+                    activeClass: "timeline-item--active",
+                    img: ".timeline__img"
+                };
+                selectors.item.eq(0).addClass(selectors.activeClass);
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    selectors.item
+                        .first()
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                var itemLength = selectors.item.length;
+                $(window).scroll(function () {
+                    var max, min;
+                    var pos = $(this).scrollTop();
+                    selectors.item.each(function (i) {
+                        min = $(this).offset().top;
+                        max = $(this).height() + $(this).offset().top;
+                        var that = $(this);
+                        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                            selectors.item.removeClass(selectors.activeClass);
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                selectors.item
+                                    .last()
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.last().addClass(selectors.activeClass);
+                        } else if (pos <= max - 40 && pos >= min) {
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                $(this)
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.removeClass(selectors.activeClass);
+                            $(this).addClass(selectors.activeClass);
+                        }
+                    });
+                });
+            };
+        })(jQuery);
+
+        $("#timeline-1").timeline();
+
+    </script>
+</body>
